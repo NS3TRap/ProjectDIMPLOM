@@ -1,0 +1,353 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    flex-shrink: 0;
+    background-color: rgba(152, 186, 210, 1)
+}
+
+/* --------------------------------------------*/
+
+.memsui--student_notifications{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.memsui--calendar{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 720px;
+    height: 556px;
+}
+
+/* --------------calendar-header---------------*/
+.memsui--calendar-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* -----month-picker-----*/
+.memsui--month-picker{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.memsui--month-picker__month{
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.memsui--month-picker__year{
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    margin-left: 12px;
+}
+
+.memsui--month-picker__button{
+    width: 8px;
+    height: 4px;
+    flex-shrink: 0;
+    fill: rgba(0, 0, 0, 0.80);
+    margin-left: 12px;
+}
+
+/* -----auxiliary-elements-----*/
+.memsui--auxiliary-elements{
+    display: flex;
+    flex-direction: row;
+}
+
+.memsui--filter-button{
+    width: 39px;
+    height: 22px;
+    flex-shrink: 0;
+    color: rgba(34, 38, 40, 1);
+    fill:rgba(214, 227, 237, 1);
+}
+
+.memsui--information-button{
+    margin-left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39px;
+    height: 22px;
+    flex-shrink: 0;
+    color: rgba(34, 38, 40, 1);
+    border-radius: 8.8px;
+    background: #D6E3ED;
+}
+
+/* --------------calendar-body---------------*/
+.memsui--calendar-body{
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -----days-of-the-week-----*/
+.memsui--days-of-the-week{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.memsui--days-of-the-week__day-name{
+    display: flex;
+    justify-content: center;
+    width: 90px;
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Open Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* -----days-panel-----*/
+.memsui--days-panel{
+    width: 720px;
+    display: flex;
+    flex-direction: column;
+}
+
+.memsui--days-panel-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+/* -----day-panel-----*/
+.memsui--day-panel{
+    width: 90px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: rgba(239, 244, 248, 1);
+    cursor: pointer;
+}
+
+.memsui--day-panel_hidden{
+    background-color: rgba(239, 244, 248, 0.4);
+    .memsui--information-window__date{
+        color: rgba(0, 0, 0, 0.25);
+    }
+    .memsui--information-window__text{
+        color: rgba(49, 50, 50, 0.25);
+    }
+    .memsui--indicator__count{
+        color:rgba(49, 50, 50, 0.4);
+    }
+    .memsui--indicator_test-task{
+        background-color: rgba(124, 218, 146, 0.4);
+    }
+    .memsui--indicator_task-deadline{
+        background-color: rgba(229, 110, 122, 0.4);
+    }
+    .memsui--indicator_unread-notification{
+        background-color: rgba(112, 197, 227, 0.4);
+    }
+}
+
+.memsui--day-panel_active{
+    background-color: rgba(214, 227, 237, 1);
+    .memsui--information-window__date{
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .memsui--information-window__text{
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .memsui--indicator__count{
+        color:rgba(49, 50, 50, 0.8);
+    }
+    .memsui--indicator_test-task{
+        background-color: rgba(124, 218, 146, 1);
+    }
+    .memsui--indicator_task-deadline{
+        background-color: rgba(229, 110, 122, 1);
+    }
+    .memsui--indicator_unread-notification{
+        background-color: rgba(112, 197, 227, 1);
+    }
+}
+
+.memsui--day-panel-top{
+    height: 50%;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.memsui--information-window{
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.memsui--information-window__date{
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.memsui--information-window__text{
+    color: rgba(49, 50, 50, 0.7);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Open Sans;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.memsui--marks-zone{
+    display: flex;
+    flex-direction: column;
+}
+
+.memsui--selected-mark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #7C99AB;
+}
+
+.memsui--selected-mark__central-circle{
+    width: 4px;
+    height: 4px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+.memsui--day-panel-bottom{
+    height: 44%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.memsui--indicators-panel{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 4px;
+    margin-right: 4px;
+}
+
+.memsui--indicator{
+    display: flex;
+    width: 14px;
+    height: 14px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+.memsui--indicator__count{
+    color: rgba(49, 50, 50, 0.65);
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.memsui--indicator_hidden{
+    display: none;
+}
+
+.memsui--indicator_test-task{
+    background-color: rgba(124, 218, 146, 0.7);
+}
+
+.memsui--indicator_task-deadline{
+    background-color: rgba(229, 110, 122, 0.7);
+}
+
+.memsui--indicator_unread-notification{
+    background-color: rgba(112, 197, 227, 0.7);
+}
+
+/* -----months-navigation-----*/
+
+.memsui--months-navigation{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.memsui--months-navigation__back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.memsui--months-navigation__back path{
+    transform: translate(16%,16%);
+}
+
+.memsui--months-navigation__next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.memsui--months-navigation__next path{
+    transform: translate(16%,16%);
+}

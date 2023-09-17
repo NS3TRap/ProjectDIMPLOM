@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/plugins/weekSelect/weekSelect.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+        <link href="css\task2_style.css" rel="stylesheet" type="text/css"> 
+    </head>
+    <body onload="handlingEvents(event)" onclick="hideInformationWindow(event)">
+        <div class="memsui--student-activity">
+            <div class="memsui--visual-student-statistics">
+                <div class="memsui--title-stattistics memsui--title-stattistics_position">
+                    <p class="memsui--title">Активность</p>
+                    <div class="memsui--week-selector">
+                        <input id="weekSelector" onchange="resizeWeekSelector()" class="memsui--week-selector_date-text" readonly="readonly" type="text">
+                        <button class="memsui--button-arrow memsui--button-arrow_down memsui--button-arrow_button-style memsui--button-arrow_hidden" onclick="handlingEvents(event)">  
+                            <div class="memsui--button-arrow__line memsui--button-arrow__line_color-dark memsui--button-arrow__line_rotated"></div>
+                            <div class="memsui--button-arrow__line memsui--button-arrow__line_color-dark memsui--button-arrow__line_rotated2"></div>
+                        </button>
+                    </div>
+                </div>
+                <div class="memsui--activity-diagram">
+                    <div id="lastWeek" class="memsui--buttons" onclick="handlingEvents(event)">
+                        <div class="memsui--button-arrow memsui--button-arrow_left">
+                            <div class="memsui--button-arrow__line memsui--button-arrow__line_focused memsui--button-arrow__line_rotated"></div>
+                            <div class="memsui--button-arrow__line memsui--button-arrow__line_focused memsui--button-arrow__line_rotated2"></div>
+                        </div>
+                    </div>
+                    <div class="memsui--column-chart">
+                        <div class="memsui--columns" onclick="showInformationPanel(event)">
+                            <div class="memsui--information-window">
+                                <div class="memsui--information-window__information">
+                                    <p class="memsui--information-window__text">xx.xx</p>
+                                    <p class="memsui--information-window__text memsui--information-window__text_margin-top-zero">Сделано:</p>
+                                </div>
+                                <div class="memsui--information-window__triangle"></div>
+                            </div>  
+                            <div tabindex="-1" data-number = "1" data-date="17.04" data-count="3" class="memsui--columns__column"></div>
+                            <div tabindex="-1" data-number = "2" data-date="18.04" data-count="3" class="memsui--columns__column"></div>
+                            <div tabindex="-1" data-number = "3" data-date="19.04" data-count="3" class="memsui--columns__column"></div>
+                            <div tabindex="-1" data-number = "4" data-date="20.04" data-count="3" class="memsui--columns__column"></div>
+                            <div tabindex="-1" data-number = "5" data-date="21.04" data-count="3" class="memsui--columns__column"></div>
+                            <div tabindex="-1" data-number = "6" data-date="22.04" data-count="3" class="memsui--columns__column"></div>
+                            <div tabindex="-1" data-number = "7" data-date="23.04" data-count="3" class="memsui--columns__column"></div>
+                        </div>
+                        
+                        <div class="memsui--axis-label">
+                            <p class="memsui--axis-label__text">пн</p>
+                            <p class="memsui--axis-label__text">вт</p>
+                            <p class="memsui--axis-label__text">ср</p>
+                            <p class="memsui--axis-label__text">чт</p>
+                            <p class="memsui--axis-label__text">пт</p>
+                            <p class="memsui--axis-label__text">сб</p>
+                            <p class="memsui--axis-label__text">вс</p>
+                        </div>
+                    </div>
+                    <div id="nextWeek" class="memsui--buttons" onclick="handlingEvents(event)">
+                        <div class="memsui--button-arrow">
+                            <div class="memsui--button-arrow__line memsui--button-arrow__line_focused memsui--button-arrow__line_rotated"></div>
+                            <div class="memsui--button-arrow__line memsui--button-arrow__line_focused memsui--button-arrow__line_rotated2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="memsui--text-student-statistics memsui--text-student-statistics_height">
+                <div class="memsui--avg-number-of-tasks">
+                    <div class="memsui--avg-number-of-tasks__box">
+                        <p class="memsui--avg-number-of-tasks__number">X</p>
+                        <p class="memsui--avg-number-of-tasks__text">задач</p>
+                    </div>
+                    <p class="memsui--avg-number-of-tasks__avg-text">В среднем</p>
+                </div>
+                <div class="memsui--max-number-of-tasks">
+                    <div class="memsui--max-number-of-tasks__box">
+                        <p class="memsui--max-number-of-tasks__number">X</p>
+                        <p class="memsui--max-number-of-tasks__text">задач</p>
+                    </div>
+                    <p class="memsui--max-number-of-tasks__max-text">Максимум в день</p>
+                </div>
+            </div>
+        </div>
+        <script src="js\task2.js"></script>
+    </body>
+</html>

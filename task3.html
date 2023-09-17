@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TZ3</title>
+        <link href="css\task3_style.css" rel="stylesheet" type="text/css">
+        <script src="js\task3.js"></script>
+    </head>
+    <body onload="showOverlay()">
+        <div class="memsui--results_overlay">
+            <div class="memsui--results_overlay-content">
+                <div class="memsui--results_overlay-content-top">
+                    <div class="memsui--button-close" onclick="hideOverlay()">+</div>
+                </div>
+                <div class="memsui--results_overlay-content-middle">
+                    <div class="memsui--title">РЕЗУЛЬТАТ ТЕСТИРОВАНИЯ</div>
+                    <div class="memsui--subtitle memsui--subtitle_margin-top-12">
+                        <div class="memsui--subtitle__text">Название теста</div>
+                        <div class="memsui--subtitle__text memsui--subtitle__text_size-14">Попытка #1</div>
+                    </div>
+                </div>
+                <div class="memsui--results_overlay-content-bottom margin-top-16">
+                    <div class="memsui--test-information">
+                        <div class="memsui--data">
+                            <div class="memsui--data__text">Всего вопросов:</div>
+                            <div class="memsui--data__text">###</div>
+                        </div>
+                        <div class="memsui--data margin-top-16">
+                            <div class="memsui--data__text"v>Верно отвеченных:</div>
+                            <div class="memsui--data__text">###</div>
+                        </div>
+                        <div class="memsui--data margin-top-16">
+                            <div class="memsui--data__text">Неверно отвеченных:</div>
+                            <div class="memsui--data__text">###</div>
+                        </div>
+                        <div class="memsui--data margin-top-16">
+                            <div class="memsui--data__text">Время выполнения:</div>
+                            <div class="memsui--data__text">##:##:##</div>
+                        </div>
+                    </div>
+                    <div class="memsui--demarcation-line margin-top-16">
+                        <span class="memsui--demarcation-line__line"></span>
+                    </div>
+                    <div class="memsui--test-rezult margin-top-16">
+                        <div class="memsui--data">
+                            <div class="memsui--data__text memsui--data__text_weight600">Итоговая оценка</div>
+                            <div class="memsui--data__text memsui--data__text_weight600">###.##</div>
+                        </div>
+                        <div class="memsui--data margin-top-16">
+                            <div class="memsui--data__text memsui--data__text_weight600">Отзыв</div>
+                            <div class="memsui--data__text memsui--data__text_weight600">Неудовлетворительно</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

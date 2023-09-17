@@ -1,0 +1,150 @@
+﻿
+.memsui--day-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 52px;
+    margin-left: 52px;
+    margin-top: 60px;
+    width: 260px;
+    height: 797px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F4F7F9;
+}
+
+.memsui--day-info__title{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.memsui--day-info__text{
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.memsui--day-info__current-day{
+    color: #2B2D2F;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.memsui--search-field{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: rgba(214, 227, 237, 1);
+}
+
+.memsui--search-field__text{
+    color: rgba(43, 45, 47, 0.60);
+    font-family: Open Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    margin-left: 16px;
+}
+
+.memsui--search-field__icon{
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.memsui--tasks-colletcions{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.memsui--tasks-colletcions__element{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 16px;
+    width: 220px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: rgba(239, 244, 248, 1);
+}
+
+.memsui--tasks-colletcions__information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.memsui--tasks-colletcions__type{
+    color: rgba(43, 45, 47, 0.6);
+    font-family: Open Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.memsui--tasks-colletcions__expiration-date{
+    color: rgba(146, 148, 149, 0.8);
+    text-align: right;
+    font-family: Open Sans;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.memsui--tasks-colletcions__additional-Information{
+    display: flex;
+    justify-content: center;
+    color: rgba(43, 45, 47, 0.5);
+    font-family: Open Sans;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.45px;
+}
+
+.memsui--tasks-colletcions__element_active{
+    background-color: rgba(214, 227, 237, 0.6);
+    .memsui--tasks-colletcions__type{
+        color: rgba(43, 45, 47, 1);
+    }
+    .memsui--tasks-colletcions__expiration-date{
+        color: rgba(146, 148, 149, 1);
+    }
+    .memsui--tasks-colletcions__additional-Information{
+        color: rgba(43, 45, 47, 0.5);
+    }
+}

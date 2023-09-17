@@ -1,0 +1,47 @@
+﻿<html>
+    <head>
+        <link href="css\task1_style.css" rel="stylesheet" type="text/css"> 
+        <script src="js\task1.js"></script>
+    </head>
+    <body onload="progressView()">
+        <div class="parent">
+            <div class="memsui--round-progress-bar">
+                <div class="memsui--top-progress-bar">
+                    <div class="memsui--progress-bar" data-percent="50">
+                        <div class="memsui--bar-text">
+                            <div>
+                                <p id="total-percent">##%</p>
+                            </div>
+                        </div>
+                        <svg>
+                            <circle class="memsui--round-bg" cx="50%" cy="50%" r="43%"></circle>
+                            <circle class="memsui--round-bg2" cx="50%" cy="50%" r="43%"></circle>                            
+                            <circle class="memsui--round-progress" cx="50%" cy="50%" r="43%"></circle>
+                        </svg>
+                    </div>
+                    <div class="memsui--progress-bar-content">
+                        <div class="memsui--text-content">
+                            <p>Лекции:</p>
+                            <p id="percent_lectures">##%</p>
+                        </div>
+                        <div class="memsui--text-content">
+                            <p>Тесты:</p>
+                            <p id="percent_tests">##%</p>
+                        </div>
+                        <div class="memsui--text-content">
+                            <p>Лаб. работы:</p>
+                            <p id="percent_laboratoryWorks">##%</p>
+                        </div>
+                        <div class="memsui--demarcationLine-content"><span></span></div>
+                        <div class="memsui--text-content-averageScore">
+                            <p>Средн. балл:</p>
+                            <p id="averageScore">#.##</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="memsui--demarcationLine-chapter"><span></span></div>
+                <div class="memsui--bottom-progress-bar"></div>
+            </div>
+        </div>
+    </body>
+</html>

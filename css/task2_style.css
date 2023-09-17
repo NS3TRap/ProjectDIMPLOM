@@ -1,0 +1,311 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+.memsui--student-activity{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    width: 480px;
+    height: 234px;
+    background: #F4F7F9;
+    border-radius: 10px;
+}
+
+.memsui--button-arrow_hidden{
+    display: none !important;
+}
+
+.memsui--buttons{
+    display: flex;
+    align-items: center;
+}
+
+.memsui--button-arrow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.memsui--button-arrow:hover .memsui--button-arrow__line_focused{
+    background-color:#BDCCD4;
+}
+
+.memsui--button-arrow:active .memsui--button-arrow__line_focused{
+    background-color:#ACBFCA;
+}
+
+.memsui--button-arrow__line{
+    content: '';
+    width: 18px;
+    height: 3px;
+    border-radius: 2.4px;
+    background-color: #D6E3ED;
+    transition: .2s;
+}
+
+.memsui--button-arrow__line_rotated{
+    transform: rotate(60deg) translate(-4px, -4px);
+}
+
+.memsui--button-arrow__line_rotated2{
+    transform: rotate(300deg) translate(-4px, 4px);
+}
+
+.memsui--button-arrow_left{
+    transform: rotateY(180deg);
+}
+
+.memsui--visual-student-statistics{
+    display: flex;
+    flex-direction: column;
+}
+
+/*-----------title-stattistics-----------*/
+.memsui--title-stattistics{
+    display: flex;
+    flex-direction: column;
+}
+
+.memsui--title{
+    margin: 0;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
+.memsui--week-selector{
+    display: flex;
+    flex-direction: row;
+    height: 15px;
+    align-items: center;
+}
+
+.memsui--week-selector_date-text{
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: #F4F7F9;
+    max-width: 120px;
+    margin: 0;
+    cursor: pointer;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: #7E7E7E;
+}
+
+.memsui--button-arrow_button-style{
+    border: none;
+    outline: none;
+    background-color: #F4F7F9;
+}
+.memsui--button-arrow_down{
+    transform: rotate(90deg) scale(0.25);
+}
+
+.memsui--button-arrow__line_color-dark{
+    background-color: #7E7E7E;
+}
+
+/*----------#title-stattistics#--------*/
+
+/*---------memsui--activity-diagram-----*/
+
+.memsui--activity-diagram{
+    display: flex;
+    flex-direction: row;
+}
+
+.memsui--columns{
+    width: 232px;
+    height: 152px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.memsui--columns__column{
+    width: 21px;
+    height: 30px;
+    background-color: #98BAD2;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.memsui--columns__column_empty{
+    height: 10px;
+    background-color:#D6E3ED;
+}
+
+.memsui--columns__column:focus{
+    outline: none;
+    background-color: #37607E;
+}
+
+.memsui--columns__column:hover{
+    background-color: #5990B7;
+}
+
+.memsui--information-window{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 84px;
+    height: 40px;
+    border-radius: 10px;
+    background: #1C303F;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.memsui--information-window_display-block{
+    display: block;
+}
+
+.memsui--information-window__triangle{
+    position: absolute;
+    z-index: 1;
+    left: 38px;
+    top: 100%;
+    border: 4px solid transparent;
+    border-top: 4px solid #1C303F;
+}
+
+.memsui--information-window__information{
+    display: flex;
+    flex-direction: column;
+    padding: 4px 8px 4px 8px;
+}
+
+.memsui--information-window__text{
+    margin: 0;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.memsui--axis-label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.memsui--axis-label__text{
+    margin: 0;
+    width: 20px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #7E7E7E;
+}
+/*-------text-student-statistics-------*/
+
+.memsui--text-student-statistics{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.memsui--text-student-statistics_height{
+    height: 64%;
+}
+
+.memsui--avg-number-of-tasks__number{
+    margin: 0;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.075em;
+    color: #000000;
+}
+
+.memsui--avg-number-of-tasks__text{
+    margin: 0;
+    padding-top: 9px;
+    margin-left: 12px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.075em;
+    color: #313132;
+}
+
+.memsui--avg-number-of-tasks__box{
+    display: flex;
+    flex-direction: row;
+}
+
+.memsui--avg-number-of-tasks__avg-text{
+    margin: 0;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: #ACB3B8;
+}
+
+.memsui--max-number-of-tasks__number{
+    margin: 0;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.075em;
+    color: #000000;
+}
+
+.memsui--max-number-of-tasks__text{
+    margin: 0;
+    padding-top: 9px;
+    margin-left: 12px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.075em;
+    color: #313132;
+}
+
+.memsui--max-number-of-tasks__box{
+    display: flex;
+    flex-direction: row;
+}
+
+.memsui--max-number-of-tasks__max-text{
+    margin: 0;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: #ACB3B8;
+}
+
+/*------#text-student-statistics#------*/

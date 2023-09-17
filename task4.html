@@ -1,0 +1,1126 @@
+﻿<!DOCTYPE html5>
+<html>
+    <head>
+        <title>TZ4</title>
+        <link href="css\task4_style.css" rel="stylesheet" type="text/css">
+        <link href="css\task4_2_style.css" rel="stylesheet" type="text/css">
+        <script src="js\task4.js"></script>
+    </head>
+    <body>
+        <!--HEADER-->
+        <header></header>
+        <!--TASK-->
+        <div class="memsui--student_notifications">
+            <div class="memsui--calendar">
+                <!-- HEADER КАЛЕНДАРЯ-->
+                <div class="memsui--calendar-header">
+                    <div class="memsui--month-picker">
+                        <div class="memsui--month-picker__month">Декабрь</div>
+                        <div class="memsui--month-picker__year">2022</div>
+                        <svg class="memsui--month-picker__button" xmlns="http://www.w3.org/2000/svg" width="8" height="4" viewBox="0 0 8 4" fill="none">
+                            <path d="M0 1.08674C0 0.608472 0.52176 0.313056 0.931875 0.559125L3.31401 1.9884C3.73625 2.24175 4.26375 2.24175 4.68599 1.9884L7.06813 0.559125C7.47824 0.313056 8 0.608472 8 1.08674C8 1.29586 7.89379 1.49067 7.71801 1.60395L4.72227 3.53454C4.28246 3.81797 3.71754 3.81797 3.27773 3.53454L0.281993 1.60395C0.106213 1.49067 0 1.29586 0 1.08674Z" fill="black" fill-opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <div class="memsui--auxiliary-elements">
+                        <svg class="memsui--filter-button" xmlns="http://www.w3.org/2000/svg" width="39" height="22" viewBox="0 0 39 22" fill="none">
+                            <rect width="39" height="22" rx="10" fill="#D6E3ED"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6048 11.344C17.6163 11.3541 17.6271 11.3636 17.6379 11.3749C18.3246 12.0737 18.7032 12.9993 18.7032 13.9817V16.4988L20.1261 15.7293C20.2381 15.6686 20.3075 15.5498 20.3075 15.419V13.9741C20.3075 12.9955 20.6823 12.0731 21.3626 11.3781L24.4407 8.1275C24.6398 7.91711 24.7493 7.64102 24.7493 7.34976V6.7584C24.7493 6.46525 24.5164 6.22706 24.2313 6.22706H14.7679C14.4822 6.22706 14.2493 6.46525 14.2493 6.7584V7.34976C14.2493 7.64102 14.3587 7.91711 14.5579 8.12687L17.6048 11.344ZM18.4792 17.6007C18.3507 17.6007 18.2234 17.5665 18.1076 17.4983C17.8836 17.3656 17.7493 17.1312 17.7493 16.8709V13.9824C17.7493 13.2653 17.4801 12.5899 16.9895 12.0725C16.9749 12.0605 16.9602 12.0472 16.9475 12.0333L13.8637 8.77765C13.4971 8.39099 13.2954 7.88366 13.2954 7.35042V6.75906C13.2954 5.94341 13.9566 5.28003 14.7686 5.28003H24.232C25.0433 5.28003 25.7045 5.94341 25.7045 6.75906V7.35042C25.7045 7.88302 25.5028 8.38972 25.1375 8.77701L22.053 12.0333C21.542 12.5564 21.2627 13.2444 21.2627 13.9748V15.4197C21.2627 15.8973 21.0024 16.3345 20.5837 16.562L18.8267 17.5122C18.7172 17.571 18.5982 17.6007 18.4792 17.6007Z" fill="#222628"/>
+                        </svg>
+                        <div class="memsui--information-button">i</div>
+                    </div>
+                </div>
+                <!-- BODY КАЛЕНДАРЯ-->
+                <div class="memsui--calendar-body">
+                    <div class="memsui--days-of-the-week">
+                        <div class="memsui--days-of-the-week__day-name">понедельник</div>
+                        <div class="memsui--days-of-the-week__day-name">вторник</div>
+                        <div class="memsui--days-of-the-week__day-name">среда</div>
+                        <div class="memsui--days-of-the-week__day-name">четверг</div>
+                        <div class="memsui--days-of-the-week__day-name">пятница</div>
+                        <div class="memsui--days-of-the-week__day-name">суббота</div>
+                        <div class="memsui--days-of-the-week__day-name">воскресенье</div>
+                    </div>
+                    <div class="memsui--days-panel">
+                        <div class="memsui--days-panel-row">
+                            <div class="memsui--day-panel memsui--day-panel_hidden">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel memsui--day-panel_hidden">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel memsui--day-panel_hidden">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel memsui--day-panel_active">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="memsui--days-panel-row">
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="memsui--days-panel-row">
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="memsui--days-panel-row">
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="memsui--days-panel-row">
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="memsui--day-panel">
+                                <div class="memsui--day-panel-top"> 
+                                    <div class="memsui--information-window">
+                                        <div class="memsui--information-window__date">xx.xx</div>
+                                        <div class="memsui--information-window__text">x заданий</div>
+                                    </div>
+                                    <div class="memsui--marks-zone">
+                                        <div class="memsui--selected-mark">
+                                            <div class="memsui--selected-mark__central-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="memsui--day-panel-bottom">
+                                    <div class="memsui--indicators-panel">
+                                        <!-- Непрочитанное уведомление -->
+                                        <div class="memsui--indicator memsui--indicator_unread-notification">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Крайний срок задания -->
+                                        <div class="memsui--indicator memsui--indicator_task-deadline memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                        <!-- Контрольное задание -->
+                                        <div class="memsui--indicator memsui--indicator_test-task memsui--indicator_hidden">
+                                            <div class="memsui--indicator__count">X</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="memsui--months-navigation">
+                        <svg class="memsui--months-navigation__back" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <rect width="22" height="22" rx="11" transform="matrix(-1 0 0 1 22 0)" fill="#EFF4F8"/>
+                            <path d="M8.04991 12.1333C8.57519 12.1333 8.91435 11.5775 8.67411 11.1104L6.87381 7.60979C6.67698 7.22709 6.67698 6.77291 6.87381 6.3902L8.67412 2.8896C8.91435 2.42247 8.57519 1.86666 8.04991 1.86666C7.79439 1.86666 7.55905 2.00552 7.4355 2.22919L5.15631 6.35531C4.93468 6.75653 4.93468 7.24347 5.15631 7.64469L7.4355 11.7708C7.55905 11.9945 7.79439 12.1333 8.04991 12.1333Z" fill="black" fill-opacity="0.8"/>
+                        </svg>
+                        <svg class="memsui--months-navigation__next" class="memsui--months-navigation__back" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <rect width="22" height="22" rx="11" transform="matrix(-1 0 0 1 22 0)" fill="#EFF4F8"/>
+                            <path d="M5.95009 12.1333C5.42481 12.1333 5.08565 11.5775 5.32589 11.1104L7.12619 7.60979C7.32302 7.22709 7.32302 6.77291 7.12619 6.3902L5.32588 2.8896C5.08565 2.42247 5.42481 1.86666 5.95009 1.86666C6.20561 1.86666 6.44095 2.00552 6.5645 2.22919L8.84369 6.35531C9.06532 6.75653 9.06532 7.24347 8.84369 7.64469L6.5645 11.7708C6.44095 11.9945 6.20561 12.1333 5.95009 12.1333Z" fill="black" fill-opacity="0.8"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="memsui--day-info">
+                <div class="memsui--day-info__title">
+                    <div class="memsui--day-info__text">Выбранный день</div>
+                    <div class="memsui--day-info__current-day">понедельник</div>
+                </div>
+                <div class="memsui--search-field">
+                    <div class="memsui--search-field__text">Найти задание</div>
+                    <svg class="memsui--search-field__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M14.6874 8.17682C14.6874 11.3185 12.1766 13.8536 9.09369 13.8536C6.01075 13.8536 3.5 11.3185 3.5 8.17682C3.5 5.03519 6.01075 2.5 9.09369 2.5C12.1766 2.5 14.6874 5.03519 14.6874 8.17682Z" stroke="#2B2D2F"/>
+                        <line y1="-0.5" x2="4.62761" y2="-0.5" transform="matrix(0.7023 0.711881 -0.7023 0.711881 12.75 12.7058)" stroke="#2B2D2F"/>
+                    </svg>
+                </div>
+                <div class="memsui--tasks-colletcions">
+                    <div class="memsui--tasks-colletcions__element memsui--tasks-colletcions__element_active">
+                        <div class="memsui--tasks-colletcions__information">
+                            <div class="memsui--tasks-colletcions__type">Лекция</div>
+                            <div class="memsui--tasks-colletcions__expiration-date">до 00.00.2022</div>
+                        </div>
+                        <div class="memsui--tasks-colletcions__additional-Information">
+                            Название курса. Название лекции
+                        </div>
+                    </div>
+                    <div class="memsui--tasks-colletcions__element">
+                        <div class="memsui--tasks-colletcions__information">
+                            <div class="memsui--tasks-colletcions__type">Лекция</div>
+                            <div class="memsui--tasks-colletcions__expiration-date">до 00.00.2022</div>
+                        </div>
+                        <div class="memsui--tasks-colletcions__additional-Information">
+                            Название курса. Название лекции
+                        </div>
+                    </div>
+                    <div class="memsui--tasks-colletcions__element">
+                        <div class="memsui--tasks-colletcions__information">
+                            <div class="memsui--tasks-colletcions__type">Лекция</div>
+                            <div class="memsui--tasks-colletcions__expiration-date">до 00.00.2022</div>
+                        </div>
+                        <div class="memsui--tasks-colletcions__additional-Information">
+                            Название курса. Название лекции
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
