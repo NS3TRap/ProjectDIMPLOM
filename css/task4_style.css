@@ -19,7 +19,7 @@ header{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 .memsui--calendar{
     margin-top: 60px;
@@ -44,7 +44,10 @@ header{
     align-items: center;
 }
 
-.memsui--month-picker__month{
+.memsui--month-picker__date{
+    padding: 0;
+    border: none;
+    outline: none;
     color: rgba(0, 0, 0, 0.80);
     font-family: Open Sans;
     font-size: 14px;
@@ -53,18 +56,6 @@ header{
     line-height: normal;
     letter-spacing: 0.7px;
     text-transform: uppercase;
-}
-
-.memsui--month-picker__year{
-    color: rgba(0, 0, 0, 0.80);
-    font-family: Open Sans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    margin-left: 12px;
 }
 
 .memsui--month-picker__button{
@@ -72,7 +63,12 @@ header{
     height: 4px;
     flex-shrink: 0;
     fill: rgba(0, 0, 0, 0.80);
-    margin-left: 12px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.memsui--month-picker__button_hidden{
+    display: none;
 }
 
 /* -----auxiliary-elements-----*/
@@ -87,6 +83,91 @@ header{
     flex-shrink: 0;
     color: rgba(34, 38, 40, 1);
     fill:rgba(214, 227, 237, 1);
+    cursor: pointer;
+}
+
+.memsui--filter{
+    display: none;
+    margin-top: 28px;
+    margin-left: -228px;
+    position: absolute;
+    z-index: 1;
+    width: 248px;
+    height: 186px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: rgba(243, 247, 249, 1);
+}
+
+.memsui--button-zone{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    margin-left: -8px;
+    width: 100%;
+  }
+  
+.memsui--button-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    top: 24%;
+    left: -2%;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    background: rgba(214, 227, 237, 1);
+    color:rgba(0, 0, 0, 1);
+    transform: rotate(45deg);
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.memsui--filter__content{
+    display: flex;
+    flex-direction: column;
+    margin-top: -8px;
+}
+
+.memsui--filter__title{
+    color: #2B2D2F;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.memsui--filter__param{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.memsui--filter__text{
+    color: #313232;
+    font-family: Open Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.memsui--filter__checkbox{
+    cursor: pointer;
 }
 
 .memsui--information-button{
@@ -100,6 +181,62 @@ header{
     color: rgba(34, 38, 40, 1);
     border-radius: 8.8px;
     background: #D6E3ED;
+    cursor: pointer;
+}
+
+.memsui--legend-overlay{
+    display: none;
+    position: absolute;
+    margin-top: 28px;
+    margin-left: -228px;
+    z-index: 1;
+    width: 248px;
+    height: 138px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: rgba(243, 247, 249, 1);
+}
+
+.memsui--legend-overlay__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -8px;
+}
+
+.memsui--legend-overlay__title{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: #2B2D2F;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.memsui--legend-overlay__info{
+    display: flex;
+    flex-direction: row;
+    margin-left: 16px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.memsui--legend-overlay__text{
+    margin-left: 8px;
+    color: #313232;
+    font-family: Open Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 /* --------------calendar-body---------------*/
@@ -240,6 +377,7 @@ header{
 .memsui--marks-zone{
     display: flex;
     flex-direction: column;
+    width: 12px;
 }
 
 .memsui--selected-mark{
@@ -251,6 +389,12 @@ header{
     flex-shrink: 0;
     border-radius: 50%;
     background-color: #7C99AB;
+}
+
+.memsui--selected-mark_hidden{
+    .memsui--selected-mark{
+        display: none;
+    }
 }
 
 .memsui--selected-mark__central-circle{

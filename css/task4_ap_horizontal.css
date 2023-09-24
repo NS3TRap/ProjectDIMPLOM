@@ -1,0 +1,43 @@
+﻿@media(orientation: landscape){
+    .memsui--calendar{
+        width: 50vw;
+        height: 55vh;
+    }
+    .memsui--month-picker__month{
+        font-size: 0.9vw;
+    }
+    .memsui--month-picker__year{
+        font-size: 0.9vw;
+        margin-left: 0.8vw;
+    }
+    .memsui--month-picker__button{
+        width: 0.5vw;
+        height: 0.4vh;
+        margin-left: 0.8vw;
+    }
+    .memsui--filter-button{
+        width: 2.7vw;
+        height: 2.1vh;
+    }
+    .memsui--information-button{
+        width: 2.7vw;
+        height: 2.1vh;
+        margin-left: 1.1vw;
+        border-radius: 0.6vw;
+    }
+    .memsui--calendar-body{
+        margin-top: 2.4vh; 
+    }
+    .memsui--days-of-the-week__day-name{
+        width: 6.25vw;
+        font-size: 0.7vw;
+    }
+    .memsui--days-panel{
+        width: 50vw;
+    }
+    .memsui--day-panel{
+        width: 6.25vw;
+        height: calc(6.25vw/1.125);
+        border-radius: 10%;
+    }
+}
